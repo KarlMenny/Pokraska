@@ -1,0 +1,42 @@
+.burger-menu {
+	position: absolute;
+	width: 100%;
+	top: -518px;
+	left: 0;
+	padding-top: 65px;
+	padding-bottom: 43px;
+	background-color: #EEE;
+	text-align: center;
+	z-index: 5;
+
+	&_show {
+		top: 126px;
+	}
+
+	&__item {
+		margin-bottom: 45px;
+
+		&_mb {
+			margin-bottom: 57px;
+		}
+	}
+
+	&__link {
+		font-family: $montser;
+		font-weight: 600;
+		font-size: 1.0625rem;
+		letter-spacing: 0.05em;
+		color: #303030;
+
+		&:hover {
+			text-decoration: underline;
+			color: #44B09A;
+		}
+	}
+
+	&__close {
+		@include size(56px, 23px);
+		display: inline-block;
+		background: url(../images/arrow.svg) no-repeat;
+	}
+}

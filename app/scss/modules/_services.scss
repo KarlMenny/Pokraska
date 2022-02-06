@@ -1,0 +1,135 @@
+.services {
+	position: relative;
+	padding-top: 65px;
+	padding-bottom: 108px;
+	background-color: #EEE;
+
+	&__subtitle {
+		display: block;
+		margin-bottom: 5px;
+		font-family: $montser;
+		font-size: 0.875rem;
+		font-weight: 300;
+		letter-spacing: 0.13em;
+		line-height: 1.4;
+		text-align: center;
+		color: #4B4B4B;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font-family: $montser;
+		font-weight: 700;
+		font-size: 1.6875rem;
+		line-height: 1.1;
+		text-align: center;
+	}
+
+	&__service {
+		margin-bottom: 40px;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		overflow: hidden;
+		cursor: pointer;
+
+		&_mb {
+			margin-bottom: 0;
+		}
+
+		& >div:hover {
+			-webkit-filter: brightness(75%);
+			filter: brightness(75%);;
+		}
+	}
+
+	&__img {
+		margin-bottom: 13px;
+		height: 276px;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		&_img-1 {
+			background-image: url('../images/services/profnastil.jpg');
+		}
+
+		&_img-2 {
+			background-image: url('../images/services/metalconstr.jpg');
+		}
+
+		&_img-3 {
+			background-image: url('../images/services/aluminii.jpg');
+		}
+
+		&_img-4 {
+			background-image: url('../images/services/avtodiski.jpg');
+		}
+	}
+
+	&__text {
+		font-family: $montser;
+		font-weight: 600;
+		font-size: 1rem;
+		line-height: 1.3;
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		color: #4B4B4B;
+	}
+
+	&__strip {
+		@include size(100px, 3px);
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		background: #44AF99;
+		border-radius: 556px;
+	}
+
+	@media (min-width: 768px) {
+		padding-bottom: 75px;
+
+		&__row {
+			margin-bottom: 37px;
+
+			&_mb {
+				margin-bottom: 0;
+			}
+		}
+
+		&__service {
+			margin-bottom: 0;
+		}
+
+		&__subtitle {
+			font-size: 0.9375rem;
+		}
+
+		&__title {
+			font-size: 2rem;
+			margin-bottom: 24px;
+		}
+
+		&__img {
+			margin-bottom: 10px;
+		}
+
+		&__strip {
+			display: none;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		padding-top: 108px;
+		padding-bottom: 150px;
+
+		&__strip {
+			display: block;
+			width: 160px;
+			bottom: 66px;
+		}
+	}
+}

@@ -1,0 +1,353 @@
+.header {
+	position: relative;
+
+	&__ceiling {
+		position: relative;
+		padding: 20px 0;
+		background-color: #FFF;
+		-webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.25);
+		box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.25);
+		z-index: 999;
+	}
+
+	&__container {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	&__menu {
+		display: none;
+	}
+
+	&__contacts-wrapper {
+		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		text-align: center;
+		color: #4B4B4B;
+	}
+
+	&__adress {
+		font-size: 0.75rem;
+		letter-spacing: 0.03em;
+		white-space: nowrap;
+		margin-bottom: 15px;
+	}
+
+	&__phone {
+		font-size: 0.8125rem;
+		letter-spacing: 0.03em;
+		margin-bottom: 10px;
+
+		&_mb {
+			margin-bottom: 0;
+		}
+	}
+
+	&__main {
+		position: relative;
+		overflow: hidden;
+		height: 545px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		background: url(../images/header_bg.jpg) no-repeat;
+		background-position: 32%;
+		background-size: cover;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		font-family: $montser;
+		font-size: 1.3125rem;
+		font-weight: 900;
+		line-height: 1.35;
+		letter-spacing: 0.03em;
+		text-align: center;
+		color: #fff;
+	}
+
+	&__btn {
+		width: 220px;
+		border-radius: 35px;
+		font-family: $montser;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		line-height: 45px;
+		text-align: center;
+		background: #40e094;
+		background: -o-linear-gradient(top, #40e094 0%,#299662 100%);
+		background: -webkit-gradient(linear, left top, left bottom, from(#40e094),to(#299662));
+		background: linear-gradient(to bottom, #40e094 0%,#299662 100%);
+		-webkit-box-shadow: 0px 4px 3px rgba(60, 60, 60, 0.21);
+		box-shadow: 0px 4px 3px rgba(60, 60, 60, 0.21);
+		color: #fff;
+		cursor: pointer;
+
+		&:hover {
+			-webkit-transform: scale(0.95);
+			-ms-transform: scale(0.95);
+			transform: scale(0.95);
+			background: #31b878;
+			background: -o-linear-gradient(top, #31b878 0%,#175d3c 100%);
+			background: -webkit-gradient(linear, left top, left bottom, from(#31b878),to(#175d3c));
+			background: linear-gradient(to bottom, #31b878 0%,#175d3c 100%);
+		}
+
+	}
+
+	&__scroll {
+		display: none;
+	}
+
+	&__form-wrapper {
+		position: absolute;
+		top: 0;
+		right: -100%;
+		padding: 80px 0;
+		max-width: 360px;
+		width: 100%;
+		background-color: #494F4E;
+		border: 1px solid #848484;
+
+		&_position {
+			right: 0;
+		}
+	}
+
+	&__form-close {
+		@include size(40px);
+		position: absolute;
+		top: 17px;
+		right: 17px;
+		cursor: pointer;
+
+		&:hover {
+			-webkit-transform: scale(0.9);
+			-ms-transform: scale(0.9);
+			transform: scale(0.9);
+		}
+	}
+
+	&__form-strip {
+		@include size(40px, 4px);
+		display: block;
+		background-color: #E9E9E9;
+
+		&_rotate-1 {
+			-webkit-transform: rotate(45deg) translateY(12px) translateX(12px);
+			-ms-transform: rotate(45deg) translateY(12px) translateX(12px);
+			transform: rotate(45deg) translateY(12px) translateX(12px);
+		}
+
+		&_rotate-2 {
+			-webkit-transform: rotate(-45deg) translateY(9px) translateX(-9px);
+			-ms-transform: rotate(-45deg) translateY(9px) translateX(-9px);
+			transform: rotate(-45deg) translateY(9px) translateX(-9px);
+		}
+	}
+
+
+
+	@media (min-width: 768px) {
+
+		&__logo img {
+			max-width: 90px;
+		}
+
+		&__adress {
+			display: none;
+		}
+
+		&__phone {
+			font-size: 0.9375rem;
+			margin-bottom: 17px;
+
+			&_mb {
+				margin-bottom: 0;
+			}
+		}
+
+		&__main {
+			height: 647px;
+		}
+
+		&__title {
+			padding-top: 130px;
+			margin-bottom: 33px;
+			font-size: 2.25rem;
+			letter-spacing: 0.05em;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__logo img {
+			max-width: 98px;
+		}
+
+		&__contacts-wrapper {
+			width: initial;
+		}
+
+		&__menu {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
+
+		&__menu-item {
+			margin-right: 60px;
+
+			&_mr {
+				margin-right: 0;
+			}
+		}
+
+		&__menu-link {
+			position: relative;
+			font-family: $montser;
+			font-size: 0.875rem;
+			font-weight: 500;
+			letter-spacing: 0.03em;
+			color: #4B4B4B;
+
+			&:hover {
+				color: #4B4B4B;
+			}
+
+			&::before {
+				content: '';
+				background: #44AF99;
+				border-radius: 556px;
+				height: 4px;
+				position: absolute;
+				bottom: -8px;
+				left: 50%;
+				right: 50%;
+				-webkit-transition: all .3s linear;
+				-o-transition: all .3s linear;
+				transition: all .3s linear;
+			}
+
+			&:hover::before {
+				left: 0;
+				right: 0;
+			}
+		}
+
+		&__phone {
+			margin-bottom: 8px;
+
+			&_mb {
+				margin-bottom: 0;
+			}
+		}
+
+		&__main {
+			height: 100vh;
+		}
+
+		&__title {
+			font-size: 2.625rem;
+			margin-bottom: 36px;
+		}
+
+		&__btn {
+			margin-bottom: 30px;
+		}
+
+		&__scroll-container {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		&__scroll {
+			@include size(31px, 54px);
+			display: block;
+			position: relative;
+			background: url(../images/scroll.svg) no-repeat;
+			-webkit-animation: scroll .4s infinite ease-out alternate;
+			animation: scroll .4s infinite ease-out alternate;
+
+			&:hover {
+				-webkit-animation-play-state: paused;
+				animation-play-state: paused;
+			}
+		}
+
+		&__strip {
+			border-left: 1px dashed #fff;
+
+			&_height_small {
+				height: 80px;
+				margin-bottom: 21px;
+			}
+
+			&_height_long {
+				height: 109px;
+				margin-top: 21px;
+			}
+		}
+
+		@-webkit-keyframes scroll {
+
+			from {
+				top: -10px;
+			}
+
+			to {
+				top: 10px;
+			}
+		}
+
+		@keyframes scroll {
+
+			from {
+				top: -10px;
+			}
+
+			to {
+				top: 10px;
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+
+		&__logo img {
+			width: 100%;
+			max-width: 90px;
+		}
+	}
+}
