@@ -1,0 +1,161 @@
+.benefits-paint {
+	padding-top: 80px;
+
+	&__container {
+		margin-bottom: 28px;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font-family: $montser;
+		font-weight: 700;
+		font-size: 1.375rem;
+		line-height: 1.2;
+		letter-spacing: 0.03em;
+	}
+
+	&__text {
+		margin-bottom: 25px;
+		font-size: 0.9375rem;
+		letter-spacing: 0.03em;
+		line-height: 1.4;
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 25px;
+		margin-bottom: 28px;
+		font-size: 0.9375rem;
+		letter-spacing: 0.03em;
+		line-height: 1.4;
+
+		&::before {
+			content: "•";
+			position: absolute;
+			left: 15px;
+			color: #44B09A;
+		}
+
+		&_mb {
+			margin-bottom: 0;
+		}
+
+		& span {
+			font-weight: 700;
+		}
+	}
+
+	&__link {
+		display: inline;
+		color: #44B09A;
+		text-decoration: underline;
+
+		&:hover {
+			color: blue;
+			text-decoration: underline;
+		}
+	}
+
+	&__img {
+		height: 285px;
+		background: url(../images/benefit.jpg);
+		background-size: cover;
+
+		&_media_768 {
+			display: none;
+		}
+
+		&_media_1200 {
+			display: none;
+		}
+	}
+
+	@media (min-width: 361px) and (max-width: 767px) {
+
+		&__img {
+			background-position: 0% 80%;
+		}
+	}
+
+	@media (min-width: 768px) {
+		padding: 60px 0;
+
+		&__container {
+			margin-bottom: 0;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+			font-size: 1.5rem;
+		}
+
+		&__text {
+			margin-bottom: 30px;
+		}
+
+		&__item {
+			margin-bottom: 28px;
+
+			&_mb {
+				margin-bottom: 0;
+			}
+		}
+
+		&__img {
+			display: none;
+
+			&_media_768 {
+				@include size(321px, 538px);
+				display: block;
+				float: right;
+				margin-left: 30px;
+				margin-bottom: 10px;
+				background-position: 50%;
+			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		padding-bottom: 68px;
+	}
+
+	@media (min-width: 1200px) {
+		padding: 110px 0;
+
+		&__title {
+			margin-bottom: 30px;
+			font-size: 2.25rem;
+			text-align: center;
+		}
+
+		&__text {
+			font-size: 1rem;
+			margin-bottom: 45px;
+		}
+
+		&__item {
+			font-size: 1rem;
+			margin-bottom: 35px;
+
+			&_mb {
+				margin-bottom: 0;
+			}
+		}
+
+		&__img {
+
+			&_media_768 {
+				display: none;
+			}
+
+			&_media_1200 {
+				@include size(464px, 371px);
+				display: block;
+				float: right;
+				margin-left: 30px;
+				background-position: 50%;
+			}
+		}
+	}
+}
+

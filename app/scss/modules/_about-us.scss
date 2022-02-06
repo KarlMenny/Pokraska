@@ -1,0 +1,145 @@
+.about-us {
+	padding: 0;
+
+	&__row {
+		padding-top: 54px;
+	}
+
+	&__description {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: 40px;
+		font-family: $montser;
+		font-size: 1.75rem;
+		font-weight: 700;
+		letter-spacing: 0.03em;
+		line-height: 1.2;
+
+		&::after {
+			@include size(43px, 3px);
+			content: '';
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			background: #44AF99;
+			border-radius: 556px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 35px;
+		font-size: 0.875rem;
+		letter-spacing: 0.01em;
+		line-height: 1.35;
+	}
+
+	&__img-1 {
+		height: 373px;
+		background: url(../images/about_us_disk.jpg) no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__list-item {
+		margin-bottom: 25px;
+		font-size: 1.125rem;
+		letter-spacing: 0.03em;
+
+		&_mb {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__img-2 {
+		height: 423px;
+		background: url(../images/about_us_camera.jpg) no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	@media (min-width: 768px) {
+
+		&__row {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			padding-top: 0;
+		}
+
+		&__description {
+			-ms-flex-preferred-size: 50%;
+			    flex-basis: 50%;
+			padding-top: 70px;
+			padding-left: 18px;
+			padding-right: 35px;
+
+			&_revers {
+				-webkit-box-ordinal-group: 2;
+				    -ms-flex-order: 1;
+				        order: 1;
+			}
+
+			&_pl {
+				padding-top: 95px;
+				padding-left: 40px;
+			}
+		}
+
+		&__title {
+			font-size: 1.5rem;
+
+			&::after {
+				width: 34px;
+			}
+		}
+
+		&__text {
+			font-size: 0.9375rem;
+			margin-bottom: 0;
+		}
+
+		&__img-1,
+		&__img-2 {
+			@include size(384px, 365px);
+			-ms-flex-preferred-size: 50%;
+			    flex-basis: 50%;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__description {
+			padding-top: 45px;
+			padding-left: 80px;
+			padding-right: 0;
+
+			&_pl {
+				padding-top: 75px;
+				padding-left: 110px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 65px;
+			font-size: 2.25rem;
+
+			&::after {
+				width: 68px;
+				bottom: -30px;
+			}
+		}
+
+		&__text {
+			font-size: 1.125rem;
+		}
+
+		&__img-1,
+		&__img-2 {
+			height: 393px;
+		}
+	}
+}

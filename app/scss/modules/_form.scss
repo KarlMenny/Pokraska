@@ -1,0 +1,75 @@
+.form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+
+
+	&__label {
+		font-family: Roboto, sans-serif;
+		font-size: 0.9375rem;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+		color: #fff;
+	}
+
+	&__field {
+		@include size(252px, 36px);
+		display: block;
+		padding: 5px;
+		margin-top: 4px;
+		margin-bottom: 30px;
+		border: 1px solid #7A7A7A;
+		border-radius: 5px;
+		-webkit-box-shadow: inset -2px -2px 10px rgba(0, 0, 0, 0.09), inset 2px 2px 4px rgba(0, 0, 0, 0.25);
+		        box-shadow: inset -2px -2px 10px rgba(0, 0, 0, 0.09), inset 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+		&:focus {
+			background-color: #E8F0FE;
+		}
+
+		&_additionally {
+			height: 143px;
+			resize: none;
+		}
+
+		&_mb {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__btn {
+		width: 166px;
+		border-radius: 4454px;
+		font-family: $montser;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		line-height: 39px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #fff;
+		background: #40E094;
+		background: -webkit-gradient(linear, left top, left bottom, from(#40E094), to(#299662));
+		background: -webkit-linear-gradient(top, #40E094 0%, #299662 100%);
+		background: -o-linear-gradient(top, #40E094 0%, #299662 100%);
+		background: linear-gradient(180deg, #40E094 0%, #299662 100%);
+		-webkit-box-shadow: 0px 4px 3px rgba(60, 60, 60, 0.21);
+		        box-shadow: 0px 4px 3px rgba(60, 60, 60, 0.21);
+
+		&:hover {
+			-webkit-transform: scale(0.95);
+			    -ms-transform: scale(0.95);
+			        transform: scale(0.95);
+			background: -webkit-gradient(linear, left top, left bottom, from(#31B878), to(#175D3C));
+			background: -webkit-linear-gradient(top, #31B878 0%, #175D3C 100%);
+			background: -o-linear-gradient(top, #31B878 0%, #175D3C 100%);
+			background: linear-gradient(180deg, #31B878 0%, #175D3C 100%);
+		}
+	}
+}

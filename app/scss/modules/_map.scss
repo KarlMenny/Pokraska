@@ -1,0 +1,27 @@
+.map {
+	&__iframe {
+		width: 100%;
+		height: 215px;
+		margin-bottom: -3px;
+	}
+
+	@media (min-width: 768px) {
+
+		&__iframe {
+			height: 351px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__iframe {
+			height: 552px;
+		}
+	}
+}
+
+
+
+
+
+

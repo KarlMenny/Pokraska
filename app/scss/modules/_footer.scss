@@ -1,0 +1,253 @@
+.footer {
+	padding-top: 45px;
+	background: #494F4E;
+
+	&__container {
+		position: relative;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: 30px;
+		font-family: $montser;
+		font-size: 1.0625rem;
+		font-weight: 700;
+		line-height: 1.3;
+		letter-spacing: 0.05em;
+		color: #949494;
+
+		&::after {
+			@include size(43px, 3px);
+			position: absolute;
+			bottom: -15px;
+			left: 0;
+			content: '';
+			background: #44AF99;
+			border-radius: 556px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 20px;
+		font-family: $montser;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		line-height: 1.2;
+		letter-spacing: 0.03em;
+		white-space: nowrap;
+		color: #fff;
+
+		&_mb {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		color: #fff;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__wrapper {
+		margin-bottom: 15px;
+
+		&_mb {
+			margin-bottom: 0;
+		}
+	}
+
+	&__contacts-title {
+		margin-bottom: 10px;
+		font-family: $montser;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		color: #949494;
+	}
+
+	&__contacts-text {
+		font-family: $montser;
+		font-size: 0.8125rem;
+		font-weight: 400;
+		color: #fff;
+
+		&_mb {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__list .footer__item {
+		letter-spacing: initial;
+	}
+
+	&__services {
+		margin-top: 38px;
+	}
+
+	&__share-container {
+		margin-top: 32px;
+		margin-bottom: 32px;
+	}
+
+	&__share {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	&__social {
+		margin-right: 22px;
+
+		&_mr {
+			margin-right: 0;
+		}
+
+		&:hover {
+			-webkit-transform: scale(1.1);
+			    -ms-transform: scale(1.1);
+			        transform: scale(1.1);
+		}
+	}
+
+	&__social-img {
+		@include size(30px);
+	}
+
+	&__author {
+		display: block;
+		padding: 8px 0;
+		border-top: 1px solid transparent;
+		-o-border-image: -o-linear-gradient(left, #494f4e 0%,#9a44af 17%,#546a9f 34%,#44af99 50%,#546a9f 67%,#9a44af 84%,#7db9e8 100%);
+		border-image: -webkit-gradient(linear, left top, right top, from(#494f4e),color-stop(17%, #9a44af),color-stop(34%, #546a9f),color-stop(50%, #44af99),color-stop(67%, #546a9f),color-stop(84%, #9a44af),to(#7db9e8));
+		border-image: linear-gradient(to right, #494f4e 0%,#9a44af 17%,#546a9f 34%,#44af99 50%,#546a9f 67%,#9a44af 84%,#7db9e8 100%);
+		border-image-slice: 1;
+		font-size: 0.625rem;
+		text-align: center;
+		color: #fff;
+	}
+
+	&__arrow-up {
+		display: none;
+	}
+
+	@media (max-width: 359px) {
+
+		&__item {
+			white-space: normal;
+		}
+	}
+
+	@media (min-width: 361px) {
+
+		&__container {
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+		}
+
+		&__menu {
+			margin-right: 74px;
+		}
+
+		&__share-container {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+		}
+	}
+
+	@media (min-width: 768px) {
+
+		&__container {
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			-ms-flex-wrap: nowrap;
+			    flex-wrap: nowrap;
+		}
+
+		&__menu,
+		&__contacts {
+			margin-right: 70px;
+		}
+
+		&__item {
+			margin-bottom: 24.3px;
+
+			&_mb {
+				margin-bottom: 0;
+			}
+		}
+
+		&__contacts-text {
+			line-height: 1.2;
+		}
+
+		&__services {
+			margin: 0;
+		}
+
+		&__share-container {
+			margin-top: 22px;
+			margin-bottom: 22px;
+		}
+	}
+
+	@media (min-width: 992px) {
+
+		&__item {
+			margin-bottom: 22px;
+
+			&_mb {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		&__menu {
+			margin-right: 183px;
+		}
+
+		&__item {
+			font-size: 0.9375rem;
+		}
+
+		&__contacts {
+			margin-right: 133px;
+		}
+
+		&__contacts-title,
+		&__contacts-text {
+			font-size: 0.9375rem;
+		}
+
+		&__share-container {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		&__arrow-up {
+			@include pos($t: 0, $r: 0);
+			display: block;
+
+			&:hover {
+				top: -7px;
+			}
+		}
+	}
+}

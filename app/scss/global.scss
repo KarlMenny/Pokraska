@@ -1,0 +1,36 @@
+// Base
+@import "base/_variables";
+@import "base/_mixins";
+@import "base/_reset";
+
+// Layout
+@import "layout/_general";
+
+// Page index styles
+@import "modules/_header";
+@import "modules/_form";
+@import "modules/_burger-btn";
+@import "modules/_burger-menu";
+@import "modules/_benefits";
+@import "modules/_about-us";
+@import "modules/_services";
+@import "modules/_gallery";
+@import "modules/_price";
+@import "modules/_benefits-paint";
+@import "modules/_map";
+@import "modules/_footer";
+
+// Page prices styles
+@import "modules/_bread-crumbs";
+@import "modules/_prices";
+
+// Page colors styles
+@import "modules/_colors";
+
+// Page articles styles
+@import "modules/_articles";
+
+// Page article styles
+@import "modules/_article-1";
+@import "modules/_article-2";
+@import "modules/_article-3";
